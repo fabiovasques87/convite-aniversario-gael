@@ -43,9 +43,16 @@
 
       .localizacao-evento, .presenca--evento, .sugestao--presente{
         display: flex;
-        align-items:end;
+        flex-direction: column;
+        /* align-items:end; */
         font-size: 48px;
         color: blue;
+        width:200px;
+        height:200px;
+        border-radius: 100px;
+        background-color: #ccc;
+        align-items: center;
+        
 
       }
 
@@ -58,6 +65,12 @@
       .presenca--evento, .localizacao-evento,.sugestao--presente{
         margin:15px;
       }
+      /* .icones--interno{
+        display: flex;
+        flex-direction: column;
+        background-color: red;
+        border: 1px solid red;
+      } */
       .data--evento{
         font-size: 32px;
       }
@@ -69,9 +82,7 @@
       }
 
       .texto--icones{
-        font-size: 16px;
-        margin-bottom: 10px;
-        margin-right: 5px;
+        font-size: 20px;
       }
       .sugestao--presente{
         font-size: 22px;
@@ -80,14 +91,17 @@
       .sugestao--1,.sugestao--2,.sugestao--3{
         font-size: 20px;
         font-style: italic;
+        margin: 30px;
         
         
       }
       .fa-solid{
         color: #008000;
-        font-size:32px;
-        margin-right: 10px;
-        margin-bottom: 10px;
+        font-size:50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 18px;
       }
       .primeiro--ano{
         font-size: 30px;
@@ -100,6 +114,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+      .frase--sugestao-presente{
+        text-align: center;
+        font-size: 32px;
+        font-weight: 600;
       }
 
       /* @media (max-width:600px){
@@ -163,27 +182,34 @@
 
     <div class="primeiro--ano">Meu 1º Aninho</div>
    
-        <div class="sugestao--presente">Sugestões para presente:</div>
+        <p class="frase--sugestao-presente">Sugestões para presente:</p>
         <div class="sugestao--conteinner">
             <div class="sugestao--1"><i class="fa-solid fa-shirt"></i>visto tamamho 1</div>
             <div class="sugestao--2"><i class="fa-solid fa-shoe-prints"></i> calço tamanho 19</div>
-            <div class="sugestao--3"><i class="fa-solid fa-car-side"></i>Amo carrinhos</div>
-    </div>
+            <div class="sugestao--3"><i class="fa-solid fa-car-side"></i>Amo Dinossauros</div>
+      </div>
 
     <hr />
     <div class="menu--navegacao">
 
-        <div class="data--evento"><p>Domingo <br />21 Julho 2024</p></div>
-          <div class="linha--data--evento"></div>
-        <div class="localizacao-evento"> <div class="texto--icones">Localização</div>
-            <i class="fa-solid fa-location-pin" onclick="verLocalizacao()"></i>
+       <div class="data--evento"><p>Domingo <br />21 Julho 2024</p></div>
+       <div class="linha--data--evento"></div>
+      <div class="localizacao-evento"> 
+          <div class="icones--interno"></div>
+            <i class="fa-solid fa-location-pin" onclick="verLocalizacao()"></i> 
+            <div class="texto--icones">Localização</div>
+          </div>
+        
+        <div class="presenca--evento" onclick="confirmarPresenca()">
+          <i class="fa-solid fa-check"></i>
+          <div class="texto--icones">Confirmar presença</div>
         </div>
-        <div class="presenca--evento" onclick="confirmarPresenca()"><div class="texto--icones">Confirmar presença</div>
-          <i class="fa-solid fa-check"></i></div>
-        <div class="sugestao--presente"><div class="texto--icones">Sugestões de presentes</div>
-           <i class="fa-solid fa-gifts"></i>
+           
+          <div class="sugestao--presente"> 
+            <a href="./sugestao.html"> <i class="fa-solid fa-gifts"></i></a>
+            <div class="texto--icones" >Sugestões de presentes</div>
         </div>
-
+       
   </div>
 
 
