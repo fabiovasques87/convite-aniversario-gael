@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="refresh" content="0; url=https://fabioportovasques.github.io/delicias/index.html"> -->
+    <script src="https://kit.fontawesome.com/0518f3ccf0.js" crossorigin="anonymous"></script>
+    <title>Aniverssário Gael</title>
+
+
+
+    <style> 
+
+      .containner{
+        max-width: 900px;
+        margin: auto;
+      }
+
+      .foto-gael{
+        width: 100%;
+        
+      }
+    
+      img{
+        width: 100%;
+        
+      }
+
+      .frase-primeiro-ano img{
+        width: 500px;
+      }
+
+      .nome-gael{
+        font-size: 100px;
+        text-align: center;
+        font-weight: bold;
+      }
+    
+      .segunda-frase{
+        font-size: 22px;
+        text-align: center;
+        font-weight: 500;
+      }
+
+      .localizacao-evento, .presenca--evento, .sugestao--presente{
+        display: flex;
+        align-items:end;
+        font-size: 48px;
+        color: blue;
+
+      }
+
+      .menu--navegacao{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      .presenca--evento, .localizacao-evento,.sugestao--presente{
+        margin:15px;
+      }
+      .data--evento{
+        font-size: 32px;
+      }
+
+      .linha--data--evento{
+        height: 180px;
+        border: 1px solid;
+        margin: 20px;
+      }
+
+      .texto--icones{
+        font-size: 16px;
+        margin-bottom: 10px;
+        margin-right: 5px;
+      }
+      .sugestao--presente{
+        font-size: 22px;
+        font-style: italic;
+      }
+      .sugestao--1,.sugestao--2,.sugestao--3{
+        font-size: 20px;
+        font-style: italic;
+        
+        
+      }
+      .fa-solid{
+        color: #008000;
+        font-size:32px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      .primeiro--ano{
+        font-size: 30px;
+        font-style: italic;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .sugestao--conteinner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* @media (max-width:600px){
+        .containner {
+          max-width: 100%;
+          background-color: blue;
+        }
+        .localizacao-evento{
+          color: red;
+        }
+      } */
+
+
+
+
+
+      @media (max-width: 600px) {
+      .containner {
+        background-color: blue;
+      }
+      
+      .localizacao-evento, .presenca--evento, .sugestao--presente{
+        font-size: 35px;
+        color: red;
+      }
+    }
+
+/* 
+    @media (max-width: 900px) {
+      .containner {
+        max-width: 900px;
+        background-color: blue;
+      }
+      .localizacao-evento{
+        color: blue;
+      }
+    } */
+        
+    </style>
+
+</head>
+
+
+
+<body>
+    <!-- <div class="localizacao">
+        <a href="https://wa.me/53999975310">Confirmar Presença</a>
+    </div>
+    <div class="confirmar-presenca">
+
+    </div> -->
+
+<div class="containner">
+    <div class="foto-gael"><img src="https://media.istockphoto.com/id/1431551851/pt/vetorial/birthday-cake-vector-background-design-happy-birthday-greeting-text-with-yummy-cake.jpg?s=612x612&w=0&k=20&c=2K8os5-bInEwNGLuHM5SICqrtlKDbmty3EBSWs80WtY=
+      "></div>
+    <div class="nome-gael">Gael </div>
+    <!-- <div class="frase-primeiro-ano"> <img src="./aniver-gael/icone.jpg">fOTO </div> -->
+    <div class="segunda-frase">
+      Venha comemorar meu primeiro aninho<br /> em uma grande aventura na selva
+    </div>
+
+    <div class="primeiro--ano">Meu 1º Aninho</div>
+   
+        <div class="sugestao--presente">Sugestões para presente:</div>
+        <div class="sugestao--conteinner">
+            <div class="sugestao--1"><i class="fa-solid fa-shirt"></i>visto tamamho 1</div>
+            <div class="sugestao--2"><i class="fa-solid fa-shoe-prints"></i> calço tamanho 19</div>
+            <div class="sugestao--3"><i class="fa-solid fa-car-side"></i>Amo carrinhos</div>
+    </div>
+
+    <hr />
+    <div class="menu--navegacao">
+
+        <div class="data--evento"><p>Domingo <br />21 Julho 2024</p></div>
+          <div class="linha--data--evento"></div>
+        <div class="localizacao-evento"> <div class="texto--icones">Localização</div>
+            <i class="fa-solid fa-location-pin" onclick="verLocalizacao()"></i>
+        </div>
+        <div class="presenca--evento" onclick="confirmarPresenca()"><div class="texto--icones">Confirmar presença</div>
+          <i class="fa-solid fa-check"></i></div>
+        <div class="sugestao--presente"><div class="texto--icones">Sugestões de presentes</div>
+           <i class="fa-solid fa-gifts"></i>
+        </div>
+
+  </div>
+
+
+                  <!-- <button onclick="confirmarPresenca()">Confirmar Presença</button> -->
+
+                  <!-- <button onclick="verLocalizacao()">Ver Localização</button>  -->
+
+                  
+
+                  <script>
+                      function confirmarPresenca() {
+                      var numeroWhatsapp = '53999975310';
+                      var mensagem = encodeURIComponent('Gostaria de confirmar a presença na festa de aniversário do Gael!!! 🎉🎂');
+                      var linkWhatsapp = 'https://wa.me/' + numeroWhatsapp + '?text=' + mensagem;
+
+                      window.location.href = linkWhatsapp;
+                      }
+                  </script>
+
+
+      <script>
+          function verLocalizacao() {
+            // Substitua as coordenadas com as do local do evento
+            var latitude = '-31.34114448761431';
+            var longitude = '-54.086258987691814';
+
+            
+
+            // Monta o link para o Google Maps
+            var linkGoogleMaps = `https://www.google.com.br/maps/place/${latitude},${longitude}`;
+
+            // Abre o link em uma nova janela
+            window.open(linkGoogleMaps);
+          }
+        </script>
+
+</div>
+
+</body>
+</html>
